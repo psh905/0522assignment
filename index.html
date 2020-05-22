@@ -123,16 +123,17 @@ while(i < alist.length){
      this.value ='빨강'
      }
      ">
-   </body>
+  
     <input type="button" value="정상" onclick="
     document.querySelector('body').style.color='black';
    ">
         <ul class="nav nav-tabs">
-          <li role="presentation" ><a href="1.html">전공</a></li>
+          <li role="presentation" id="login" onclick="button_click();">전공</a></li>
           <li role="presentation"><a href="2.html">출신지역</a></li>
           <li role="presentation"><a href="3.html">나이</a></li>
           <li role="presentation"><a href="빙고.html">빙고</a></li>
         </ul>
+        
       
         <div id="grid">
 
@@ -163,7 +164,25 @@ while(i < alist.length){
           <p><a class="btn btn-primary btn-lg" href="https://www.instagram.com" role="button">Go to instagram site</a></p>
             </div>
 
+            <script>
+              function button_click(){
+              const login = document.getElementById("login");
+    
+    var password = "1234";
+    var getpass = prompt("비밀번호를 입력하세요.");
+    
+    
+        if(password == getpass) {
+            alert("로그인 되었습니다.");
+            
+            location.href="1.html"
+        } else {
+            alert("비밀번호가 틀렸습니다.");
+            location.href="index.html"
+        }
 
+              }
+            </script>
 
 
 
